@@ -13,7 +13,7 @@ tar zxf genomes.tgz
 mkdir ${dir_output}
 
 # loop on all genbank files
-for name in $(ls ${dir_input}/*.gbk)
+for name in ${dir_input}/*.gbk
 do
     # get organism name
     orga=$(awk '/ORGANISM/{print $2}' ${name})
